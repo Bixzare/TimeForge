@@ -1,26 +1,17 @@
-import CountDown from "@/components/countdown/countDown";
 import Task from "@/components/task/task";
-import CircleWrapper from "@/components/wrappers/circleWrapper";
-import Image from "next/image";
+import TabsMain from "@/components/tabs/tab-main";
+
 
 export default function Home() {
   // https://magicui.design/docs/components/video-text
   //https://magicui.design/docs/components/dot-pattern
   return (
-    <div className="flex h-screen w-full justify-start items-center flex-col pt-10">
-      <div className="bg-accent flex flex-col w-screen pb-10">
-        <div className="flex justify-center items-center gap-4 p-6">
-          <div>Pomodoro</div>
-          <div>Break</div>
-          <div>Long Break</div>
-        </div>
-        <CircleWrapper>
-          <CountDown />
-        </CircleWrapper>
-      </div>
-
-      <div className = "bg-blue-400 flex justify-center items-center w-screen h-full">
-        <Task/>
+    <div className="flex h-screen w-screen justify-start items-center flex-col p-2">
+      <div className="flex flex-col w-full rounded-xl  px-2 mt-14  ">
+        
+          <TabsMain />
+          
+          <Task />
       </div>
     </div>
   );
